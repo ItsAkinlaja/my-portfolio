@@ -1,5 +1,15 @@
 [
- 
+  {
+    "name": "Mega Builders Inc",
+    "desc": "Professional construction company website showcasing residential and commercial building services, project portfolio, team profiles, and client testimonials. Built with modern web technologies for optimal user experience.",
+    "image": "mega",
+    "category": "basicweb",
+    "links": {
+      "view": "https://megabuildersinc.netlify.app/",
+      "code": "https://github.com/itsakinlaja"
+    }
+  },
+
   {
     "name": "Britelite Website",
     "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
@@ -77,7 +87,7 @@
     "image": "hulu",
     "category": "mern",
     "links": {
-      "view": "https://hulu-clone-jigar-sable.vercel.app/",
+      "view": "#",
       "code": "https://github.com/itsakinlaja"
     }
   },

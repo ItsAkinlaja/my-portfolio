@@ -1,0 +1,14 @@
+# Block AMP URLs with 410 Gone status to prevent Google Search Console warnings
+# These rules prevent Google from crawling guessed AMP URLs on static sites
+
+# Block /amp path
+/amp    /amp    410
+
+# Block any path ending with /amp
+/*/amp    /*/amp    410
+
+# Block query parameter ?amp
+/?amp    /?amp    410
+
+# Block query parameter ?amp= followed by anything
+/?amp=*    /?amp=*    410

@@ -5,17 +5,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Face for BasierSquareMono -->
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
 
     <title>Experience | Portfolio Timileyin Akinlaja</title>
 </head>
+
+<!-- Theme Variables -->
+<style>
+/* Light Theme (Default) */
+:root {
+  --bg-primary: #f7f7f7;
+  --bg-secondary: #ffffff;
+  --text-primary: #0e2431;
+  --text-secondary: #666666;
+  --accent-primary: #4CAF50;
+  --accent-secondary: #2E7D32;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --timeline-bg: #4CAF50;
+  --timeline-text: #ffffff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --accent-primary: #4CAF50;
+  --accent-secondary: #2E7D32;
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --card-bg: #2a2a2a;
+  --timeline-bg: #4CAF50;
+  --timeline-text: #ffffff;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button styling like homepage */
+.morebtn .btn {
+  color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--accent-primary);
+  box-shadow: 0px 5px 10px var(--accent-primary);
+  transition: 0.3s ease;
+  font-family: 'BasierSquareMono', monospace;
+}
+
+.morebtn .btn:hover {
+  background: var(--accent-primary);
+  color: var(--timeline-text);
+  border-color: var(--accent-primary);
+  box-shadow: 0px 5px 15px rgba(76, 175, 80, 0.5);
+}
+
+.morebtn .btn i {
+  color: var(--accent-primary);
+  transition: 0.3s;
+}
+
+.morebtn .btn:hover i {
+  color: var(--timeline-text);
+}
+
+/* Ensure heading text uses theme colors */
+.heading {
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-right: 1rem;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.theme-btn:hover {
+  background: var(--accent-primary);
+  color: var(--timeline-text);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+[data-theme="dark"] .theme-btn i::before {
+  content: "\f185"; /* sun icon */
+}
+
+[data-theme="dark"] .theme-btn:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+}
+
+/* Credit text animations */
+.animated-credit {
+  animation: fadeInGreen 2s ease-in-out;
+  color: var(--text-primary) !important;
+}
+
+.bounce-heart {
+  animation: bounce 1s infinite;
+  color: #ff4757 !important;
+}
+
+@keyframes fadeInGreen {
+  0% {
+    opacity: 0;
+    color: #4CAF50;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.7;
+    color: #66BB6A;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    color: var(--text-primary);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Glowing green effect */
+.glow-green {
+  text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50;
+  }
+  to {
+    text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 15px #4CAF50, 0 0 20px #4CAF50;
+  }
+}
+</style>
 <body oncontextmenu="return false">
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Jigar</a>
+        <a href="/" class="logo">Akinlaja</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -29,6 +198,13 @@
             <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle Button -->
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
 </header>
 <!-- navbar ends -->
 
@@ -37,55 +213,19 @@
 
   <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
   <div class="quote">
-      <span>every experience in your life is being orchestrated to teach you something you need to know to move forward.</span>
+      <span>every experience shapes your journey, revealing lessons that guide you toward greater wisdom and purpose.</span>
   </div>
 
   <div class="timeline">
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Employed</h2>
-        </div>
-        <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>DevIncept (Top Contributor)</h2>
-          </div>
-          <div class="desc">
-              <h3>DCP 2021 Contributor | Open Source Program</h3>
-              <p>July 2021 - October 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>LetsGrowMore Summer of Code</h2>
-          </div>
-          <div class="desc">
-              <h3>LGM-SOC'21 Participant | Open Source Program</h3>
-              <p>June 2021 - August 2021</p>
-          </div>
-        </div>
-      </div>
-
     <div class="container right">
       <div class="content">
         <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
+          <h2>Vigilearn | Vibranium Valley</h2>
         </div>
         <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
+            <h3>Engineering Intern</h3>
+            <p>August 2025 - Present</p>
         </div>
       </div>
     </div>
@@ -93,11 +233,11 @@
     <div class="container left">
       <div class="content">
         <div class="tag">
-          <h2>The Spark Foundation</h2>
+          <h2>EVC Point Nigeria</h2>
         </div>
         <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
+            <h3>Intern</h3>
+            <p>May 2025 - present</p>
         </div>
       </div>
     </div>
@@ -105,11 +245,11 @@
     <div class="container right">
       <div class="content">
         <div class="tag">
-          <h2>The Spark Foundation</h2>
+          <h2>Adept Concept</h2>
         </div>
         <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
+            <h3>Shopify theme developer | Freelance</h3>
+            <p>June 2019 - Present</p>
         </div>
       </div>
     </div>
@@ -117,38 +257,14 @@
     <div class="container left">
       <div class="content">
         <div class="tag">
-          <h2>Frshr Technologies</h2>
+          <h2>InvisMedia</h2>
         </div>
         <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
+            <h3>Backend Developer | PHP, Laravel & MySQL</h3>
+            <p>May 2024 - Present</p>
         </div>
       </div>
     </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Hacktoberfest 2020</h2>
-          </div>
-          <div class="desc">
-              <h3>Contributor | Open Source Program</h3>
-              <p>October 2020 - November 2020</p>
-          </div>
-        </div>
-      </div>
 
   </div>
 
@@ -170,7 +286,7 @@
 
       <div class="box">
           <h3>Timileyin Akinlaja</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising.</p>
       </div>
 
       <div class="box">
@@ -190,7 +306,7 @@
           <p> <i class="fas fa-map-marked-alt"></i>Lagos, Nigeria</p>
           <div class="share">
 
-            <a href="https://www.linkedin.com/in/itsakinlaja" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/akinlaja/" class="fab fa-linkedin" target="_blank"></a>
             <a href="https://github.com/itsakinlaja" class="fab fa-github" target="_blank"></a>
             <a href="mailto:akinlajatimileyin@gmail.com" class="fas fa-envelope" target="_blank"></a>
             <a href="https://twitter.com/itsakinlaja" class="fab fa-twitter" target="_blank"></a>
@@ -199,7 +315,7 @@
       </div>
   </div>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/itsakinlaja"> Timileyin Akinlaja</a></h1>
+  <h1 class="credit animated-credit glow-green">Designed with <i class="fa fa-heart bounce-heart"></i> by <a href="https://www.linkedin.com/in/akinlaja/"> Timileyin Akinlaja</a></h1>
 
 </section>
 <!-- footer section ends -->
@@ -218,6 +334,62 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./script.js"></script>
+
+<!-- Theme switching functionality -->
+<script>
+// Function to get system theme preference
+function getSystemTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Function to apply theme
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Update button icon
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        if (theme === 'dark') {
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    }
+}
+
+// Theme switching functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.documentElement;
+
+// Check for saved theme preference, otherwise use system preference
+let currentTheme = localStorage.getItem('theme');
+if (!currentTheme) {
+    currentTheme = getSystemTheme();
+}
+
+applyTheme(currentTheme);
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    // Only auto-switch if user hasn't manually set a preference
+    if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        applyTheme(newTheme);
+    }
+});
+
+// Theme toggle event listener
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        // Save user preference
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
+    });
+}
+</script>
 
 </body>
 </html>

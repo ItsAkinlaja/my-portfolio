@@ -4,31 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Timileyin Akinlaja, portfolio, Akinlaja, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Akinlaja's Portfolio. Full-Stack Web Developer cms website dev god" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Top Website Developer in Lagos, Nigeria. Professional Full-Stack Developer specializing in PHP, Laravel, React, and modern web technologies. Best website developer in Nigeria for business websites, e-commerce, and custom web applications." />
+    <meta name="keywords" content="website developer Lagos, website developer Nigeria, best website developer Nigeria, full stack developer Lagos, PHP developer Lagos, Laravel developer Nigeria, web developer Lagos Nigeria, custom website development, e-commerce developer Nigeria, professional web developer Lagos" />
+    <meta name="author" content="Timileyin Akinlaja" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="NG-LA" />
+    <meta name="geo.placename" content="Lagos, Nigeria" />
+    <meta name="geo.position" content="6.5244;3.3792" />
+    <meta name="ICBM" content="6.5244, 3.3792" />
+    <link rel="canonical" href="https://www.akinlajatimileyin.space/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.akinlajatimileyin.space/" />
+    <meta property="og:title" content="Best Website Developer in Lagos, Nigeria | Timileyin Akinlaja" />
+    <meta property="og:description" content="Professional Website Developer in Lagos, Nigeria. Specializing in PHP, Laravel, React, and modern web technologies. Best web developer for business websites, e-commerce, and custom applications." />
+    <meta property="og:image" content="https://www.akinlajatimileyin.space/assets/images/preview-image.png" />
+    <meta property="og:image:secure_url" content="https://www.akinlajatimileyin.space/assets/images/preview-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Timileyin Akinlaja - Best Website Developer in Lagos, Nigeria" />
+    <meta property="og:locale" content="en_NG" />
+    <meta property="og:site_name" content="Timileyin Akinlaja - Website Developer" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.akinlajatimileyin.space/" />
+    <meta property="twitter:title" content="Best Website Developer in Lagos, Nigeria | Timileyin Akinlaja" />
+    <meta property="twitter:description" content="Professional Website Developer in Lagos, Nigeria. Specializing in PHP, Laravel, React, and modern web technologies. Best web developer for business websites and custom applications." />
+    <meta property="twitter:image" content="https://www.akinlajatimileyin.space/assets/images/preview-image.png" />
+    <meta property="twitter:image:alt" content="Timileyin Akinlaja - Best Website Developer in Lagos, Nigeria" />
     <script>
-      // Disable right-click
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-      });
-    
-      // Disable long-press menu on iPhone (touchstart)
-      document.addEventListener("touchstart", function (e) {
-        if (e.target.tagName === "IMG") {
+      // Disable right-click only on desktop (screens > 768px or devices that support hover)
+      function isDesktop() {
+        return window.innerWidth > 768 || window.matchMedia('(hover: hover)').matches;
+      }
+
+      if (isDesktop()) {
+        document.addEventListener("contextmenu", function (e) {
           e.preventDefault();
-        }
-      }, { passive: false });
+        });
+      }
+
+      // Disable long-press menu on iPhone images (only on iOS devices)
+      function isIOS() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      }
+
+      if (isIOS()) {
+        document.addEventListener("touchstart", function (e) {
+          if (e.target.tagName === "IMG") {
+            e.preventDefault();
+          }
+        }, { passive: false });
+      }
     </script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>Portfolio | Timileyin Akinlaja</title>
+    <title>Best Website Developer in Lagos, Nigeria | Timileyin Akinlaja - Full-Stack Developer</title>
 </head>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Timileyin Akinlaja",
+  "jobTitle": "Full-Stack Web Developer",
+  "description": "Professional website developer in Lagos, Nigeria specializing in PHP, Laravel, React, and modern web technologies",
+  "url": "https://www.akinlajatimileyin.space/",
+  "sameAs": [
+    "https://github.com/itsakinlaja",
+    "https://www.linkedin.com/in/akinlaja/",
+    "https://twitter.com/itsakinlaja"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lagos",
+    "addressCountry": "Nigeria"
+  },
+  "knowsAbout": [
+    "PHP Development",
+    "Laravel Framework",
+    "React.js",
+    "Node.js",
+    "MySQL",
+    "MongoDB",
+    "Web Development",
+    "Full-Stack Development",
+    "E-commerce Development",
+    "Custom Web Applications"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Website Developer",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Lagos",
+      "addressCountry": "Nigeria"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Timileyin Akinlaja - Website Developer",
+  "description": "Professional website development services in Lagos, Nigeria. Best website developer for PHP, Laravel, React applications.",
+  "url": "https://www.akinlajatimileyin.space/",
+  "telephone": "+2348104863217",
+  "email": "akinlajatimileyin@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lagos",
+    "addressCountry": "Nigeria"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "6.5244",
+    "longitude": "3.3792"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nigeria"
+  },
+  "serviceType": [
+    "Website Development",
+    "Full-Stack Development",
+    "PHP Development",
+    "Laravel Development",
+    "React Development",
+    "E-commerce Development",
+    "Custom Web Applications"
+  ],
+  "priceRange": "$$"
+}
+</script>
 <body oncontextmenu="return false">
 
 <!-- pre loader -->
@@ -38,7 +160,7 @@
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Akinlaja</a>
+        <a href="/" class="logo">Akinlaja</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -52,6 +174,13 @@
             <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle Button -->
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
 </header>
 <!-- navbar ends -->
 
@@ -71,7 +200,7 @@
   
     <div class="socials">
         <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/itsakinlaja/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/akinlaja/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/itsakinlaja" target="_blank"><i class="fab fa-github"></i></a></li>
           <li><a class="twitter" aria-label="X" href="https://x.com/itsakinlaja" target="_blank"><i class="fab fa-twitter"></i></a></li>
           <li><a class="telegram" aria-label="Telegram" href="https://t.me/its_akinlaja" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
@@ -89,8 +218,8 @@
     <br>
     <br>
     <br>
-<div class="image">
-    <img style="border-radius: 500px;" draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+    <div class="image">
+    <img style="border-radius: 500px;" draggable="false" class="tilt" src="./assets/images/hero.png" alt="Timileyin Akinlaja - Best Website Developer in Lagos, Nigeria">
 </div>
 </section>
 <!-- hero section ends -->
@@ -98,23 +227,23 @@
 
 <!-- about section starts -->
 <section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    <h1 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h1>
+    <h2 style="display: none;">Website Developer in Lagos, Nigeria - Professional Full-Stack Developer</h2>
     
     <div class="row">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="Timileyin Akinlaja - Professional Website Developer in Lagos, Nigeria">
     </div>
     <div class="content">
         <h3>I'm Timileyin Akinlaja</h3>
         <span class="tag">A Full Stack Developer</span>
         
-        <p>I'm a Full-Stack Developer based in Lagos, Nigeria, 
-          with a strong passion for problem-solving and an insatiable curiosity for how things work. 
-          A graduate of Garden Academy, Lagos, 
-          I specialize in building powerful web applications and dynamic websites using the MERN stack. 
-          I’m constantly pushing my limits by working on personal projects and full-stack clones that challenge me to grow. 
-          For me, coding isn’t just work—it’s a way to explore, innovate, and improve every single day.
+        <p style="font-family: 'Roboto', sans-serif; font-weight: 400; line-height: 1.6;">As a professional website developer in Lagos, Nigeria, I specialize in full-stack web development using PHP, Laravel, React, and modern web technologies. Based in Lagos, Nigeria, I create custom websites, e-commerce platforms, and web applications that drive business success.
+
+        My services as a website developer in Lagos include PHP development, Laravel framework expertise, React.js applications, MySQL database design, API development, and responsive web design. I deliver high-quality, scalable web solutions that meet the needs of businesses across Nigeria.
+
+        Whether you're looking for the best website developer in Nigeria or need professional web development services in Lagos, I provide comprehensive solutions from concept to deployment, ensuring your online presence stands out in the competitive digital landscape.
         </p>
         
         <div class="box-container">
@@ -132,6 +261,27 @@
         </div>
 
     </div>
+    </div>
+
+    <!-- Hidden SEO Content -->
+    <div style="display: none;">
+      <h3>Website Developer Lagos Nigeria</h3>
+      <p>Looking for the best website developer in Lagos, Nigeria? Timileyin Akinlaja provides professional web development services including PHP development, Laravel applications, React.js websites, custom web applications, e-commerce solutions, and responsive website design. As a full-stack developer based in Lagos, Nigeria, I specialize in creating modern, scalable web solutions for businesses across Nigeria.</p>
+
+      <h4>Services Offered:</h4>
+      <ul>
+        <li>Custom Website Development Lagos</li>
+        <li>PHP Laravel Developer Nigeria</li>
+        <li>React.js Web Applications</li>
+        <li>E-commerce Website Development</li>
+        <li>MySQL Database Design</li>
+        <li>API Development Services</li>
+        <li>Responsive Web Design Nigeria</li>
+        <li>Full-Stack Web Development Lagos</li>
+      </ul>
+
+      <h4>Why Choose a Website Developer in Lagos?</h4>
+      <p>As the best website developer in Nigeria, I understand the unique needs of businesses in Lagos and across Nigeria. Whether you need a corporate website, e-commerce platform, or custom web application, I deliver professional results that drive business growth and user engagement.</p>
     </div>
 </section>
 <!-- about section ends -->
@@ -161,6 +311,17 @@
     <p class="qoute">Learning is not just about acquiring knowledge, but about nurturing curiosity, expanding your horizons, and building a future through every challenge, just like a developer who constantly evolves to create and innovate.</p>
 <br>
     <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/educat/school 2.png" alt="">
+        </div>
+        <div class="content">
+        <h3>PGD Information Technology</h3>
+        <p>NOUN | National Open University of Nigeria</p>
+        <h4>2025 - Ongoing</h4>
+        </div>
+    </div>
 
     <div class="box">
         <div class="image">
@@ -219,16 +380,28 @@
     <div class="container right">
       <div class="content">
         <div class="tag">
-          <h2>Self Employed</h2>
+          <h2>Vigilearn | Vibranium Valley</h2>
         </div>
         <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
+            <h3>Engineering Intern</h3>
+            <p>August 2025 - Present</p>
         </div>
       </div>
     </div>
 
     <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>EVC Point Nigeria</h2>
+        </div>
+        <div class="desc">
+            <h3>Intern</h3>
+            <p>May 2025 - present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
       <div class="content">
         <div class="tag">
           <h2>Adept Concept</h2>
@@ -240,50 +413,14 @@
       </div>
     </div>
 
-    <div class="container right">
+    <div class="container left">
       <div class="content">
         <div class="tag">
           <h2>InvisMedia</h2>
         </div>
         <div class="desc">
-            <h3>Tech Lead</h3>
-            <p>May 2024 - Present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2></h2>
-        </div>
-        <div class="desc">
             <h3>Backend Developer | PHP, Laravel & MySQL</h3>
-            <p>April 2021 - May 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Frshr Technologies</h2>
-        </div>
-        <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
+            <p>May 2024 - Present</p>
         </div>
       </div>
     </div>
@@ -399,7 +536,7 @@
           <p> <i class="fas fa-map-marked-alt"></i>Lagos, Nigeria</p>
           <div class="share">
 
-              <a href="https://www.linkedin.com/in/itsakinlaja" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/akinlaja/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
               <a href="https://github.com/itsakinlaja" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
               <a href="mailto:akinlajatimileyin@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
               <a href="https://twitter.com/itsakinlaja" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
@@ -408,7 +545,7 @@
       </div>
   </div>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/itsakinlaja"> Timileyin Akinlaja</a></h1>
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/akinlaja/"> Timileyin Akinlaja</a></h1>
 
 </section>
 <!-- footer section ends -->

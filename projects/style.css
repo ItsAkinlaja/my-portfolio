@@ -17,7 +17,7 @@ html{
 }
 body{
   background: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'BasierSquareMono', monospace;
 }
 
 *::selection{
@@ -103,10 +103,18 @@ header .navbar ul li a:hover{
 
 /* hamburger icon starts*/
 #menu{
-  font-size: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
-  color: rgb(24, 2, 63);
+  color: var(--text-primary);
   display: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#menu:hover {
+  background-color: var(--accent-primary);
+  color: var(--timeline-text);
 }
 @media(max-width:768px){
   #menu{
@@ -152,6 +160,16 @@ header .navbar ul li a:hover{
   header .navbar.nav-toggle{
     right: 0;
   }
+
+/* Dark mode menu colors */
+[data-theme="dark"] header .navbar ul li a {
+  color: #ffffff;
+}
+[data-theme="dark"] header .navbar ul li a.active,
+[data-theme="dark"] header .navbar ul li a:hover {
+  color: #ffffff;
+  border-bottom: .5rem solid #ffffff;
+}
 }
 /* hamburger icon ends */
 
@@ -169,23 +187,37 @@ header .navbar ul li a:hover{
   color: rgb(255, 230, 0);
 }
 .work .button-group{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1rem;
   margin: 2rem auto;
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
+}
+
+.filter-row {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-row:last-child {
+  margin-bottom: 0;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.filter-row.single-button {
+  justify-content: center;
 }
 .work .button-group .btn{
   outline: none;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
   cursor: pointer;
   font-weight: 500;
+  font-size: 1.4rem;
 }
 .work .button-group .btn:hover{
   background-color: #fff;
@@ -199,7 +231,9 @@ header .navbar ul li a:hover{
   display: flex;
   flex-wrap: wrap;
   gap:1.5rem;
-  margin: 2rem;
+  margin: 2rem auto;
+  justify-content: center;
+  max-width: 1200px;
 }
 .work .box-container .box{
   flex:1 1 30rem;
@@ -233,7 +267,7 @@ header .navbar ul li a:hover{
   height: 4.5rem;
   width: 100%;
   padding-left: 1rem;
-  background: #ffd900;
+  background: #4CAF50;
 }
 .work .box-container .box .content .tag h3{
   font-size: 2rem;
@@ -274,11 +308,32 @@ header .navbar ul li a:hover{
   .work .button-group{
     width: 100%;
   }
+  .work .filter-row {
+    justify-content: center;
+  }
   .work .box-container{
-    margin: 0rem;
+    margin: 0rem auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .work .box-container .grid-item{
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
   .work .box-container .grid-item .box{
-    width: 325px !important;
+    width: 100% !important;
+    max-width: 350px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
   }
 }
 
@@ -295,9 +350,10 @@ header .navbar ul li a:hover{
   padding: 1.6rem 3rem;
   border-radius: .5em;
   transition: 0.3s;
-  color: #fff;
-  border: 2px solid #fff;
-  box-shadow: 0px 2px 4px rgba(48, 68, 247, .3);
+  color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--accent-primary);
+  box-shadow: 0px 5px 10px rgba(76, 175, 80, 0.3);
   text-align: center;
 }
 .backbtn .btn span {
@@ -311,8 +367,11 @@ header .navbar ul li a:hover{
   transition: 0.3s;
 }
 .backbtn .btn:hover{
-  background: #ffffff;
-  color: #000;
+  background: var(--accent-primary);
+  color: var(--timeline-text);
+  border-color: var(--accent-primary);
+  box-shadow: 0px 5px 15px rgba(76, 175, 80, 0.5);
+  transform: translateY(-2px);
 }
 .backbtn .btn:hover i {
   transform: translateX(-8px);
@@ -341,7 +400,7 @@ header .navbar ul li a:hover{
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #ffae00;
+  background: #4CAF50;
   color: rgb(13, 0, 44);
   border-radius: 5rem;
   transition: 1s linear;

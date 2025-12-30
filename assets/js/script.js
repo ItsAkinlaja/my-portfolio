@@ -164,6 +164,74 @@ fetchData("projects").then(data => {
     showProjects(data);
 });
 
+// Function to get system theme preference
+function getSystemTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Function to update particles color based on theme
+function updateParticlesColor(theme) {
+    const particleColor = theme === 'dark' ? '#ffffff' : '#4CAF50'; // White for dark mode, green for light mode
+
+    if (window.pJSDom && window.pJSDom[0]) {
+        const pJS = window.pJSDom[0].pJS;
+
+        // Update particle colors
+        pJS.particles.color.value = particleColor;
+        pJS.particles.line_linked.color = particleColor;
+
+        // Redraw particles
+        pJS.fn.particlesRefresh();
+    }
+}
+
+// Function to apply theme
+function applyTheme(theme) {
+    body.setAttribute('data-theme', theme);
+    updateParticlesColor(theme);
+
+    // Update button icon
+    if (theme === 'dark') {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+// Theme switching functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference, otherwise use system preference
+let currentTheme = localStorage.getItem('theme');
+if (!currentTheme) {
+    currentTheme = getSystemTheme();
+} else {
+    // If user has manually set a preference, use it
+    currentTheme = currentTheme;
+}
+
+applyTheme(currentTheme);
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    // Only auto-switch if user hasn't manually set a preference
+    if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        applyTheme(newTheme);
+    }
+});
+
+// Theme toggle event listener
+themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    // Save user preference
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+});
+
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
