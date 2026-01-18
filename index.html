@@ -37,7 +37,6 @@
     <meta property="twitter:image" content="https://www.akinlajatimileyin.space/assets/images/preview-image.png" />
     <meta property="twitter:image:alt" content="Timileyin Akinlaja - Best Website Developer in Lagos, Nigeria" />
     <script>
-      // Disable right-click only on desktop (screens > 768px or devices that support hover)
       function isDesktop() {
         return window.innerWidth > 768 || window.matchMedia('(hover: hover)').matches;
       }
@@ -46,20 +45,6 @@
         document.addEventListener("contextmenu", function (e) {
           e.preventDefault();
         });
-      }
-
-      // Disable long-press menu on iPhone images (only on iOS devices)
-      function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      }
-
-      if (isIOS()) {
-        document.addEventListener("touchstart", function (e) {
-          if (e.target.tagName === "IMG") {
-            e.preventDefault();
-          }
-        }, { passive: false });
       }
     </script>
     
@@ -151,7 +136,7 @@
   "priceRange": "$$"
 }
 </script>
-<body oncontextmenu="return false">
+<body>
 
 <!-- pre loader -->
 <!-- <div class="loader-container">
