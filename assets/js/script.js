@@ -160,8 +160,25 @@ fetchData().then(data => {
     showSkills(data);
 });
 
+// Project filtering logic
 fetchData("projects").then(data => {
-    showProjects(data);
+    let projects = data;
+    
+    // Initial display
+    showProjects(projects);
+
+    // Filter click handler
+    $('.work .button-group .btn').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        
+        let filter = $(this).attr('data-filter');
+        if (filter == 'all') {
+            showProjects(projects);
+        } else {
+            let filteredProjects = projects.filter(project => project.category == filter);
+            showProjects(filteredProjects);
+        }
+    });
 });
 
 // Function to get system theme preference

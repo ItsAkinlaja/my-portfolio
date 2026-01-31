@@ -1,5 +1,25 @@
 [
   {
+    "name": "Dapper Portfolio",
+    "desc": "Music artist portfolio website revamp featuring 'Echoes of the Streets'. Dark themed, responsive design with streaming integration and discography showcase.",
+    "image": "dapper",
+    "category": "basicweb",
+    "links": {
+      "view": "https://dappermusicent.netlify.app/",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Soft Life Realty Group",
+    "desc": "Refined Real Estate. Built for Long-Term Value. Professional real estate website for buying, selling, and investing.",
+    "image": "softlife",
+    "category": "basicweb",
+    "links": {
+      "view": "https://softliferealtygroup-c36e12.ingress-haven.ewp.live/",
+      "code": "#"
+    }
+  },
+  {
     "name": "Mega Builders Inc",
     "desc": "Professional construction company website showcasing residential and commercial building services, project portfolio, team profiles, and client testimonials. Built with modern web technologies for optimal user experience.",
     "image": "mega",
@@ -9,7 +29,6 @@
       "code": "https://github.com/itsakinlaja"
     }
   },
-
   {
     "name": "Britelite Website",
     "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
@@ -17,77 +36,6 @@
     "category": "mern",
     "links": {
       "view": "https://britelitetribe.com/",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
- 
-  {
-    "name": "ResumeGen",
-    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
-    "image": "resumegen",
-    "category": "mern",
-    "links": {
-      "view": "https://resumegenx.netlify.app/",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "React-Projects",
-    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
-    "image": "reactprojects",
-    "category": "mern",
-    "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "Flipkart PHP",
-    "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
-    "image": "flipkartphp",
-    "category": "lamp",
-    "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "JavaScript Projects Website",
-    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
-    "image": "jspro",
-    "category": "basicweb",
-    "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "Web UI Clones",
-    "desc": "Flipkart, YouTube, Instagram, Sololearn web UI clones using tailwindCSS.",
-    "image": "webuiclones",
-    "category": "mern",
-    "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "Crypto Tracker",
-    "desc": "Crypto Tracker built using ReactJS and Chakra UI. Supports dark mode. API used coingecko.",
-    "image": "cryptotracker",
-    "category": "mern",
-    "links": {
-      "view": "https://crypto-tracker-react-project.netlify.app/",
-      "code": "https://github.com/itsakinlaja"
-    }
-  },
-  {
-    "name": "Hulu Website",
-    "desc": "Hulu website built using NextJS and tailwindCSS. API used TMDB, deployed on vercel.",
-    "image": "hulu",
-    "category": "mern",
-    "links": {
-      "view": "#",
       "code": "https://github.com/itsakinlaja"
     }
   },
@@ -102,13 +50,83 @@
     }
   },
   {
+    "name": "ResumeGen",
+    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
+    "image": "resumegen",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "React-Projects",
+    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
+    "image": "reactprojects",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "Flipkart PHP",
+    "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
+    "image": "flipkartphp",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "JavaScript Projects Website",
+    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
+    "image": "jspro",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "Web UI Clones",
+    "desc": "Flipkart, YouTube, Instagram, Sololearn web UI clones using tailwindCSS.",
+    "image": "webuiclones",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "Crypto Tracker",
+    "desc": "Crypto Tracker built using ReactJS and Chakra UI. Supports dark mode. API used coingecko.",
+    "image": "cryptotracker",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
+    "name": "Hulu Website",
+    "desc": "Hulu website built using NextJS and tailwindCSS. API used TMDB, deployed on vercel.",
+    "image": "hulu",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
     "name": "Composey Website",
     "desc": "Simple landing page website built using HTML, CSS, JavaScript and some JavaScript Libraries.",
     "image": "composey",
     "category": "basicweb",
     "links": {
-      "view": "https://composey.netlify.app/",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -117,8 +135,8 @@
     "image": "tsfbank",
     "category": "lamp",
     "links": {
-      "view": "https://tsfbank.rf.gd",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -127,8 +145,8 @@
     "image": "bootstrapportfolio",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -137,8 +155,8 @@
     "image": "bootstraptemplate",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -147,8 +165,8 @@
     "image": "foodicious",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -157,8 +175,8 @@
     "image": "foodwebsite",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -167,8 +185,8 @@
     "image": "webchat",
     "category": "mern",
     "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -177,8 +195,8 @@
     "image": "issuetrack",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -187,8 +205,8 @@
     "image": "phppblform",
     "category": "lamp",
     "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -197,8 +215,8 @@
     "image": "linklist",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -207,8 +225,8 @@
     "image": "saas",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/itsakinlaja",
-      "code": "https://github.com/itsakinlaja"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -217,8 +235,8 @@
     "image": "oldsites",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -227,8 +245,8 @@
     "image": "resistercolor",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -237,8 +255,8 @@
     "image": "kiaweb",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   },
   {
@@ -247,8 +265,8 @@
     "image": "burgerweb",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://github.com/ItsAkinlaja",
+      "code": "https://github.com/ItsAkinlaja"
     }
   }
 ]
