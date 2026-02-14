@@ -1,5 +1,15 @@
 [
   {
+    "name": "GamerFed",
+    "desc": "Modern React storefront for games, consoles, handhelds, and laptops with a simple cart and WhatsApp checkout.",
+    "image": "GamerFed",
+    "category": "mern",
+    "links": {
+      "view": "https://gamerfederation.netlify.app/",
+      "code": "https://github.com/ItsAkinlaja"
+    }
+  },
+  {
     "name": "Dapper Portfolio",
     "desc": "Music artist portfolio website revamp featuring 'Echoes of the Streets'. Dark themed, responsive design with streaming integration and discography showcase.",
     "image": "dapper",
