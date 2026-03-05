@@ -1,5 +1,16 @@
 [
   {
+    "name": "VarsityBay",
+    "desc": "Campus marketplace for verified students to buy, sell, and trade safely on campus. Snap & post, chat to agree, meet & trade — simple and student‑friendly.",
+    "image": "varsitybay",
+    "category": "basicweb",
+    "featured": true,
+    "links": {
+      "view": "https://www.varsitybay.com/",
+      "code": "#"
+    }
+  },
+  {
     "name": "GamerFed",
     "desc": "Modern React storefront for games, consoles, handhelds, and laptops with a simple cart and WhatsApp checkout.",
     "image": "GamerFed",

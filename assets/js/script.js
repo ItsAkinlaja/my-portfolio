@@ -45,15 +45,32 @@ emailjs.init("tgZHRj6sFQWp6CKh1"); // Replace with your actual user ID
 // Handle form submission
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
+    const submitBtn = document.querySelector("#contact-form button[type='submit']");
+    const originalHTML = submitBtn ? submitBtn.innerHTML : null;
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("loading");
+        submitBtn.innerHTML = '<span class="spinner"></span> Submitting...';
+    }
 
     emailjs.sendForm('service_vavxu39', 'contact_form_template', '#contact-form')
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             document.getElementById("contact-form").reset();
             document.getElementById("success-popup").style.display = "flex";
+            if (submitBtn && originalHTML !== null) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("loading");
+                submitBtn.innerHTML = originalHTML;
+            }
         }, function(error) {
             console.log('FAILED...', error);
             alert("Form Submission Failed! Try Again");
+            if (submitBtn && originalHTML !== null) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("loading");
+                submitBtn.innerHTML = originalHTML;
+            }
         });
 });
 
@@ -117,13 +134,15 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+    const sorted = [...projects].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    sorted.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+        const title = project.featured ? `${project.name} <i class=\"fas fa-star star-badge\" aria-label=\"featured\"></i>` : project.name;
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" onerror="this.onerror=null;this.src='/assets/images/cmsoon.png';" />
       <div class="content">
         <div class="tag">
-        <h3>${project.name}</h3>
+        <h3>${title}</h3>
         </div>
         <div class="desc">
           <p>${project.desc}</p>
