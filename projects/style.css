@@ -250,6 +250,34 @@ header .navbar ul li a:hover{
   width:100%;
   object-fit: cover;
 }
+
+/* Dual preview (desktop + mobile side-by-side) */
+.work .box-container .box .dual-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+.work .box-container .box .dual-preview .preview-desktop {
+  flex: 1;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.work .box-container .box .dual-preview .preview-mobile {
+  flex: 0 0 35%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 .work .box-container .box .content{
   height: 100%;
   width:100%;

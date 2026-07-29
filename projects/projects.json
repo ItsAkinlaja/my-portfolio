@@ -1,5 +1,16 @@
 [
   {
+    "name": "Remmy Moore Health",
+    "desc": "Professional home healthcare website for Remmy Moore Health. Licensed caregivers delivering compassionate, personalised care directly to your home — for every age, every stage of life.",
+    "image": "remmymoorehealth",
+    "mobileImage": "remmymoorehealthmobile",
+    "category": "basicweb",
+    "links": {
+      "view": "https://www.remmymoorehealth.com/",
+      "code": "#"
+    }
+  },
+  {
     "name": "VarsityBay",
     "desc": "Campus marketplace for verified students to buy, sell, and trade safely on campus. Snap & post, chat to agree, meet & trade — simple and student‑friendly.",
     "image": "varsitybay",
