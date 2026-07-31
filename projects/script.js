@@ -46,20 +46,11 @@ function showProjects(projects) {
     const sorted = [...projects].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     sorted.forEach(project => {
         const title = project.featured ? `${project.name} <i class="fas fa-star star-badge" aria-label="featured"></i>` : project.name;
-        const desktopSrc = project.imageUrl || '/assets/images/projects/' + project.image + '.png';
-        const mobileSrc = project.mobileImageUrl || (project.mobileImage ? '/assets/images/projects/' + project.mobileImage + '.png' : null);
-
-        const imageHTML = mobileSrc
-            ? `<div class="dual-preview">
-                <img draggable="false" class="preview-desktop" src="${desktopSrc}" alt="${project.name} desktop" onerror="this.onerror=null;this.src='/assets/images/cmsoon.png';" />
-                <img draggable="false" class="preview-mobile" src="${mobileSrc}" alt="${project.name} mobile" onerror="this.onerror=null;this.src='/assets/images/cmsoon.png';" />
-               </div>`
-            : `<img draggable="false" src="${desktopSrc}" alt="${project.name}" onerror="this.onerror=null;this.src='/assets/images/cmsoon.png';" />`;
-
+        const imgSrc = project.imageUrl || '/assets/images/projects/' + project.image + '.png';
         projectsHTML += `
         <div class="grid-item ${project.category}">
         <div class="box tilt" style="width: 380px; margin: 1rem">
-      ${imageHTML}
+      <img draggable="false" src="${imgSrc}" alt="${project.name}" onerror="this.onerror=null;this.src='/assets/images/cmsoon.png';" />
       <div class="content">
         <div class="tag">
         <h3>${title}</h3>
