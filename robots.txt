@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.akinlajatimileyin.space/sitemap.xml
+Sitemap: https://akinlajatimileyin.dev/sitemap.xml
